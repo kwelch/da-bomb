@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+const checkGuess = require('../dist/').default;
+
+const run = () => {
+  readline.question('Enter your guess: ', (guess) => {
+    console.log(checkGuess(guess) ? 'Correct' : 'Incorect');
+    readline.close();
+  });
+};
+
+run();

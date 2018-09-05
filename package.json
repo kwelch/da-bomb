@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "bomb": "./bin/bomb"
+  },
   "scripts": {
     "build": "babel src/ --ignore *.spec.js -d dist/ --minified -s",
     "start": "jest --watch",
