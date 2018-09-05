@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+const { generateRandomNumber } = require('../dist/utils');
+
+const number = generateRandomNumber(0, 9);
+let attempts = 0;
+const MAX_ATTEMPTS = 3;
+
+const attempt = () => {
+  readline.question(
+    `Enter guess (${attempts + 1}/${MAX_ATTEMPTS}): `,
+    guess => {
+      const result = +guess === +number;
+      attempts = attempts + 1;
+
+      if (result) {
+        console.log('Correct!');
+        readline.close();
+        return;
+      }
+      console.log('Incorrect');
+
+      if (attempts !== MAX_ATTEMPTS) {
+        attempt();
+        return;
+      }
+
+      console.log(`Game over! - Correct Number: ${number}`);
+      readline.close();
+    }
+  );
+};
+
+attempt();

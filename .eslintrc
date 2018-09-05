@@ -1,0 +1,8 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["babel", "jest"],
+  "extends": ["eslint:recommended"],
+  "env": {
+    "jest": true
+  }
+}
