@@ -8,7 +8,7 @@ describe('generateRandomNumber', () => {
   })
 
   it('should generate an integer', () => {
-    const actual = generateRandomNumber(0, 100);
+    const actual = generateRandomNumber(0, 1);
     expect(actual % 1).toBe(0);
   });
 });
