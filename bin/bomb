@@ -3,13 +3,38 @@ const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-const checkGuess = require('../dist/').default;
+const { generateRandomNumber } = require('../dist/utils');
 
-const run = () => {
-  readline.question('Enter your guess: ', (guess) => {
-    console.log(checkGuess(guess) ? 'Correct' : 'Incorect');
-    readline.close();
-  });
+const number = generateRandomNumber(0, 2);
+let attempts = 0;
+const MAX_ATTEMPTS = 3;
+console.log(number);
+
+console.log(Array.from({length: 10}, () => generateRandomNumber(0, 2)))
+
+const attempt = () => {
+  readline.question(
+    `Enter guess (${attempts + 1}/${MAX_ATTEMPTS}): `,
+    guess => {
+      const result = +guess === +number;
+      attempts = attempts + 1;
+
+      if (result) {
+        console.log('Correct!');
+        readline.close();
+        return;
+      }
+      console.log('Incorrect');
+
+      if (attempts !== MAX_ATTEMPTS) {
+        attempt();
+        return;
+      }
+
+      console.log('Game over!');
+      readline.close();
+    }
+  );
 };
 
-run();
+attempt();
