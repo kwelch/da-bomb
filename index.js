@@ -1,4 +1,6 @@
-module.exports = function (guess) {
-  var actual = Math.floor(Math.random() * Math.floor(10))
+import {generateRandomNumber} from './utils';
+
+export default (guess) => {
+  var actual = generateRandomNumber(0, 9);
   return guess === actual;
 }
