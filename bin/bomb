@@ -5,12 +5,9 @@ const readline = require('readline').createInterface({
 });
 const { generateRandomNumber } = require('../dist/utils');
 
-const number = generateRandomNumber(0, 2);
+const number = generateRandomNumber(0, 9);
 let attempts = 0;
 const MAX_ATTEMPTS = 3;
-console.log(number);
-
-console.log(Array.from({length: 10}, () => generateRandomNumber(0, 2)))
 
 const attempt = () => {
   readline.question(
@@ -31,7 +28,7 @@ const attempt = () => {
         return;
       }
 
-      console.log('Game over!');
+      console.log(`Game over! - Correct Number: ${number}`);
       readline.close();
     }
   );
