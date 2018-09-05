@@ -2,7 +2,7 @@
   "name": "da-bomb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "bomb": "./bin/bomb"
   },
