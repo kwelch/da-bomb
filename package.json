@@ -1,6 +1,6 @@
 {
   "name": "da-bomb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Guess the number cli game and function",
   "repository": {
     "type": "git",
