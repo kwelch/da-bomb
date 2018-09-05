@@ -2,6 +2,13 @@
   "name": "da-bomb",
   "version": "1.0.0",
   "description": "Guess the number cli game and function",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kwelch/da-bomb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kwelch/da-bomb/issues"
+  },
   "files": [
     "dist",
     "bin"
@@ -15,7 +22,10 @@
     "start": "jest --watch",
     "test": "jest"
   },
-  "author": "Kyle Welch",
+  "author": {
+    "name": "Kyle Welch",
+    "email": "kwelch0626@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
