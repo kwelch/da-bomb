@@ -1,7 +1,11 @@
 {
   "name": "da-bomb",
   "version": "1.0.0",
-  "description": "",
+  "description": "Guess the number cli game and function",
+  "files": [
+    "dist",
+    "bin"
+  ],
   "main": "dist/index.js",
   "bin": {
     "bomb": "./bin/bomb"
