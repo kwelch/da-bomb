@@ -1,6 +1,6 @@
 {
   "displayName": "test",
   "testMatch": [
-    "<rootDir>/**/*.spec.js"
+    "<rootDir>/src/**/*.spec.js"
   ]
 }

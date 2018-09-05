@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel src/ --ignore *.spec.js -d dist/ --minified -s",
     "start": "jest --watch",
     "test": "jest"
   },
   "author": "Kyle Welch",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.0.0",
     "babel-jest": "^21.2.0",
